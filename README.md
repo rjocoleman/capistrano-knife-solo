@@ -72,7 +72,7 @@ set :knife_librarian, true # use librarian-chef to update cookbooks if present
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/capistrano-knife-solo/fork )
+1. [Fork it](https://github.com/rjocoleman/capistrano-knife-solo/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
