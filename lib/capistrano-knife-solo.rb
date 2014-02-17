@@ -35,13 +35,13 @@ module CapistranoKnifeSolo
       args = []
       args << host.hostname
       args << "#{fetch(:knife_args)}" if fetch(:knife_args)
-      return args 
+      return args
     end
 
     def self.roles_to_runlist(host)
       roles = host.properties.roles.reject { |r| r.to_s.start_with?('server-') or r == :all }
       roles.map! {|r| "role[#{r}]"}
-      return roles 
+      return roles
     end
 
   end
