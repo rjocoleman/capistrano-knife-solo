@@ -1,13 +1,12 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'capistrano-knife-solo/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'capistrano-knife-solo'
-  spec.version       = CapistranoKnifeSolo::VERSION
-  spec.authors       = ['Robert Coleman']
-  spec.email         = ['github@robert.net.nz']
+  spec.version       = '0.0.1'
+  spec.authors       = 'Robert Coleman'
+  spec.email         = 'github@robert.net.nz'
   spec.summary       = %q{Use knife solo with Capistrano.}
   spec.description   = %q{Use knife solo with Capistrano.}
   spec.homepage      = 'https://github.com/rjocoleman/capistrano-knife-solo'
