@@ -48,7 +48,7 @@ namespace :knife do
     manager = Chef::Knife::SoloCook.new
     CapistranoKnifeSolo::Helpers.chef_config
     manager.berkshelf_install if fetch(:knife_berkshelf)
-    set :knife_berkshelf, false
+    set :knife_berkshelf, true
     manager.librarian_install if fetch(:knife_librarian)
     set :knife_librarian, false
   end
