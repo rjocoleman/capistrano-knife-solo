@@ -33,7 +33,11 @@ module CapistranoKnifeSolo
 
     def self.knife_args(host)
       args = []
-      args << host.hostname
+      if host.user then
+        args << "#{ host.user }@#{ host.hostname }"
+      else
+        args << host.hostname
+      end
       args << "#{fetch(:knife_args)}" if fetch(:knife_args)
       return args
     end
