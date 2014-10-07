@@ -17,12 +17,12 @@ module CapistranoKnifeSolo
     end
 
     def self.knife_config(host)
-      ssh_options = fetch(:ssh_options)
+      ssh_options = fetch(:ssh_options, {})
       options = {}
       options[:ssh_user] = ssh_options[:user] if ssh_options[:user]
       options[:ssh_password] = ssh_options[:password] if ssh_options[:password]
       options[:ssh_port] = ssh_options[:port] if ssh_options[:port]
-      options[:identity_file] = ssh_options[:keys][0] if ssh_options[:keys][0]
+      options[:identity_file] = ssh_options[:keys][0] if ssh_options.fetch(:keys, [])[0]
       options[:forward_agent] = ssh_options[:forward_agent] if ssh_options[:forward_agent]
       options[:startup_script] = fetch(:knife_startup_script) if fetch(:knife_startup_script)
       options[:sudo_command] = fetch(:knife_sudo_command) if fetch(:knife_sudo_command)
