@@ -33,7 +33,7 @@ module CapistranoKnifeSolo
 
     def self.knife_args(host)
       args = []
-      if host.user then
+      if host.user
         args << "#{ host.user }@#{ host.hostname }"
       else
         args << host.hostname
