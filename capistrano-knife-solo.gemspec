@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'capistrano-knife-solo'
-  spec.version       = '0.1.0'
+  spec.version       = '0.2.0'
   spec.authors       = 'Robert Coleman'
   spec.email         = 'github@robert.net.nz'
   spec.summary       = %q{Use knife solo with Capistrano.}
