@@ -17,7 +17,7 @@ module CapistranoKnifeSolo
     end
 
     def self.knife_config(host)
-      ssh_options = fetch(:ssh_options, {})
+      ssh_options = host.netssh_options
       options = {}
       options[:ssh_user] = ssh_options[:user] if ssh_options[:user]
       options[:ssh_password] = ssh_options[:password] if ssh_options[:password]
